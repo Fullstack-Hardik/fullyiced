@@ -42,7 +42,7 @@ export default function Lookbook() {
           <figure className="md:col-start-1 md:col-span-5 group" data-scrub>
             <div className="overflow-hidden bg-[#E4E1DC] aspect-[3/4]">
               <img 
-                src="/model.png" 
+                src="/ring.png" 
                 alt="Jewelry Look 01" 
                 loading="lazy"
                 className="w-full h-full object-cover grayscale contrast-[1.04] transition-all duration-[1.1s] ease-[cubic-bezier(0.2,0.8,0.3,1)] group-hover:grayscale-0 group-hover:contrast-100 group-hover:scale-105 mobile-color"
@@ -60,7 +60,7 @@ export default function Lookbook() {
           <figure className="md:col-start-6 md:col-span-7 md:mt-[clamp(28px,7vw,96px)] group" data-scrub>
             <div className="overflow-hidden bg-[#E4E1DC] aspect-[4/3]">
               <img 
-                src="/necklace.png" 
+                src="/bracelet.png" 
                 alt="Jewelry Look 02" 
                 loading="lazy"
                 className="w-full h-full object-cover grayscale contrast-[1.04] transition-all duration-[1.1s] ease-[cubic-bezier(0.2,0.8,0.3,1)] group-hover:grayscale-0 group-hover:contrast-100 group-hover:scale-105 mobile-color"
@@ -78,7 +78,7 @@ export default function Lookbook() {
           <figure className="md:col-start-3 md:col-span-5 md:mt-[clamp(16px,3vw,44px)] group" data-scrub>
             <div className="overflow-hidden bg-[#E4E1DC] aspect-square">
               <img 
-                src="/bracelet.png" 
+                src="/necklace.png" 
                 alt="Jewelry Look 03" 
                 loading="lazy"
                 className="w-full h-full object-cover grayscale contrast-[1.04] transition-all duration-[1.1s] ease-[cubic-bezier(0.2,0.8,0.3,1)] group-hover:grayscale-0 group-hover:contrast-100 group-hover:scale-105 mobile-color"
