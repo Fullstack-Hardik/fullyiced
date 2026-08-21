@@ -32,11 +32,11 @@ export default function Navbar() {
           <div className="hidden md:block font-extrabold text-[22px] tracking-[0.26em] text-center pl-[0.26em]">
             FULLY ICED
           </div>
-          <div className="md:hidden flex items-center">
-            <button aria-label="Open Menu" className="p-2">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          <div className="md:hidden flex items-center gap-2">
+            <button aria-label="Open Menu" className="w-[32px] h-[32px] flex items-center justify-center -ml-2 text-[#101010]">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
             </button>
-            <div className="font-extrabold text-[16px] tracking-[0.26em] ml-2">FULLY ICED</div>
+            <div className="font-extrabold text-[22px] tracking-[0.26em]">FULLY ICED</div>
           </div>
           
           <div className="flex gap-[22px] justify-end items-center font-medium text-[11px] leading-none tracking-[0.14em] uppercase">
