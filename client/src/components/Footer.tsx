@@ -16,9 +16,9 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="font-bold text-[11px] tracking-[0.2em] uppercase mb-[16px]">Shop</h4>
-            <a href="#shop" className="block py-[5px] text-[13.5px] text-[#4A4741] hover:text-[#101010]">Outerwear</a>
-            <a href="#shop" className="block py-[5px] text-[13.5px] text-[#4A4741] hover:text-[#101010]">Knitwear</a>
-            <a href="#shop" className="block py-[5px] text-[13.5px] text-[#4A4741] hover:text-[#101010]">Tailoring</a>
+            <a href="#shop" className="block py-[5px] text-[13.5px] text-[#4A4741] hover:text-[#101010]">Rings</a>
+            <a href="#shop" className="block py-[5px] text-[13.5px] text-[#4A4741] hover:text-[#101010]">Necklaces</a>
+            <a href="#shop" className="block py-[5px] text-[13.5px] text-[#4A4741] hover:text-[#101010]">Bracelets</a>
             <a href="#shop" className="block py-[5px] text-[13.5px] text-[#4A4741] hover:text-[#101010]">Archive sale</a>
           </div>
           <div>

@@ -22,10 +22,10 @@ export default function Categories() {
             />
           </div>
           <div>
-            <h3 className="font-bold text-[clamp(16px,1.5vw,20px)] tracking-[0.04em] uppercase mb-[6px]">Outerwear</h3>
-            <p className="text-[12.5px] text-[#EFEDE8]/60 mb-[10px] max-w-[22ch]">Coats and overshirts cut with room to move.</p>
+            <h3 className="font-bold text-[clamp(16px,1.5vw,20px)] tracking-[0.04em] uppercase mb-[6px]">Rings</h3>
+            <p className="text-[12.5px] text-[#EFEDE8]/60 mb-[10px] max-w-[22ch]">Elegant rings that make a statement.</p>
             <span className="font-medium text-[10.5px] leading-none tracking-[0.18em] uppercase inline-flex items-center gap-[8px]">
-              Shop outerwear <i className="not-italic inline-block transition-transform duration-400 ease-[cubic-bezier(0.6,0,0.2,1)] group-hover:translate-x-[6px]">→</i>
+              Shop rings <i className="not-italic inline-block transition-transform duration-400 ease-[cubic-bezier(0.6,0,0.2,1)] group-hover:translate-x-[6px]">→</i>
             </span>
           </div>
         </a>
@@ -40,10 +40,10 @@ export default function Categories() {
             />
           </div>
           <div>
-            <h3 className="font-bold text-[clamp(16px,1.5vw,20px)] tracking-[0.04em] uppercase mb-[6px]">Knitwear</h3>
-            <p className="text-[12.5px] text-[#EFEDE8]/60 mb-[10px] max-w-[22ch]">Heavy gauge lambswool, worn soft by the second season.</p>
+            <h3 className="font-bold text-[clamp(16px,1.5vw,20px)] tracking-[0.04em] uppercase mb-[6px]">Necklaces</h3>
+            <p className="text-[12.5px] text-[#EFEDE8]/60 mb-[10px] max-w-[22ch]">Stunning necklaces for every occasion.</p>
             <span className="font-medium text-[10.5px] leading-none tracking-[0.18em] uppercase inline-flex items-center gap-[8px]">
-              Shop knitwear <i className="not-italic inline-block transition-transform duration-400 ease-[cubic-bezier(0.6,0,0.2,1)] group-hover:translate-x-[6px]">→</i>
+              Shop necklaces <i className="not-italic inline-block transition-transform duration-400 ease-[cubic-bezier(0.6,0,0.2,1)] group-hover:translate-x-[6px]">→</i>
             </span>
           </div>
         </a>
@@ -58,10 +58,10 @@ export default function Categories() {
             />
           </div>
           <div>
-            <h3 className="font-bold text-[clamp(16px,1.5vw,20px)] tracking-[0.04em] uppercase mb-[6px]">Tailoring</h3>
-            <p className="text-[12.5px] text-[#EFEDE8]/60 mb-[10px] max-w-[22ch]">Unstructured jackets you can actually sit down in.</p>
+            <h3 className="font-bold text-[clamp(16px,1.5vw,20px)] tracking-[0.04em] uppercase mb-[6px]">Bracelets</h3>
+            <p className="text-[12.5px] text-[#EFEDE8]/60 mb-[10px] max-w-[22ch]">Beautiful bracelets to complete your look.</p>
             <span className="font-medium text-[10.5px] leading-none tracking-[0.18em] uppercase inline-flex items-center gap-[8px]">
-              Shop tailoring <i className="not-italic inline-block transition-transform duration-400 ease-[cubic-bezier(0.6,0,0.2,1)] group-hover:translate-x-[6px]">→</i>
+              Shop bracelets <i className="not-italic inline-block transition-transform duration-400 ease-[cubic-bezier(0.6,0,0.2,1)] group-hover:translate-x-[6px]">→</i>
             </span>
           </div>
         </a>

@@ -13,7 +13,7 @@ export default function Season() {
             New<br />vibes
           </h2>
           <p className="mt-[18px] max-w-[32ch] text-[#4A4741] text-[14.5px]">
-            Sixteen pieces, one palette, cut from the same three cloths. Everything in the
+            Sixteen pieces, one palette, crafted from the same three metals. Everything in the
             drop works with everything else in it, which is the entire point.
           </p>
           <div className="mt-[clamp(20px,3.4vh,34px)]">

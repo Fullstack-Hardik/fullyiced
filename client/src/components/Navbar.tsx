@@ -29,8 +29,14 @@ export default function Navbar() {
             <li><a href="#" className="font-medium text-[10px] leading-none tracking-[0.16em] uppercase relative py-[6px] after:content-[''] after:absolute after:left-0 after:right-0 after:bottom-0 after:h-[1px] after:bg-[#101010] after:scale-x-0 after:origin-right after:transition-transform after:duration-400 hover:after:scale-x-100 hover:after:origin-left">Blogs</a></li>
           </ul>
           
-          <div className="font-extrabold text-[22px] tracking-[0.26em] text-center pl-[0.26em]">
+          <div className="hidden md:block font-extrabold text-[22px] tracking-[0.26em] text-center pl-[0.26em]">
             FULLY ICED
+          </div>
+          <div className="md:hidden flex items-center">
+            <button aria-label="Open Menu" className="p-2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+            <div className="font-extrabold text-[16px] tracking-[0.26em] ml-2">FULLY ICED</div>
           </div>
           
           <div className="flex gap-[22px] justify-end items-center font-medium text-[11px] leading-none tracking-[0.14em] uppercase">

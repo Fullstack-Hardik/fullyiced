@@ -24,7 +24,7 @@ export default function Hero() {
   return (
     <header id="hero" className="relative min-h-[calc(100svh-72px)] flex flex-col justify-center pt-[clamp(20px,4vh,48px)] z-[50]">
       <div className="wrap relative w-full h-full flex flex-col justify-center">
-        <div className="absolute left-[clamp(18px,3.4vw,44px)] top-[clamp(6px,2vh,22px)] z-10 md:static md:mb-[14px]">
+        <div className="hidden md:block absolute left-[clamp(18px,3.4vw,44px)] top-[clamp(6px,2vh,22px)] z-10 md:static md:mb-[14px]">
           <p className="font-medium text-[12px] leading-[1.9] tracking-[0.24em] uppercase">
             Fashion<br />that moves<br />with you.
           </p>
@@ -52,6 +52,12 @@ export default function Hero() {
                className="w-full h-auto object-contain object-bottom max-h-[90vh] drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
              />
           </div>
+        </div>
+        <div className="md:hidden flex flex-col items-center justify-center mt-12 pb-[40px] z-10 relative">
+          <p className="font-medium text-[12px] leading-[1.9] tracking-[0.24em] uppercase text-center">
+            Fashion<br />that moves<br />with you.
+          </p>
+          <div className="w-[52px] h-[1px] bg-[#101010] mt-[12px]"></div>
         </div>
       </div>
     </header>

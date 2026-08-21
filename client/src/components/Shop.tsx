@@ -3,10 +3,10 @@
 import React, { useState } from 'react';
 
 const PRODUCTS = [
-  { nm: 'Rift Overshirt', ct: 'Outerwear', pr: 185 },
-  { nm: 'Heavy Tee', ct: 'Essentials', pr: 58 },
-  { nm: 'Gauge Cardigan', ct: 'Knitwear', pr: 210 },
-  { nm: 'Cable Crew', ct: 'Knitwear', pr: 240 }
+  { nm: 'Diamond Ring', ct: 'Rings', pr: 1850 },
+  { nm: 'Gold Chain', ct: 'Necklaces', pr: 580 },
+  { nm: 'Pearl Bracelet', ct: 'Bracelets', pr: 2100 },
+  { nm: 'Silver Band', ct: 'Rings', pr: 240 }
 ];
 
 export default function Shop() {
