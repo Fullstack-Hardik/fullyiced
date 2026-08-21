@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
+import DepthCarousel from './DepthCarousel';
 
 export default function Lookbook() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -38,60 +39,23 @@ export default function Lookbook() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-[clamp(12px,1.8vw,26px)] items-start">
-          <figure className="md:col-start-1 md:col-span-5 group" data-scrub>
-            <div className="overflow-hidden bg-[#E4E1DC] aspect-[3/4]">
-              <img 
-                src="/ring.png" 
-                alt="Jewelry Look 01" 
-                loading="lazy"
-                className="w-full h-full object-cover grayscale contrast-[1.04] transition-all duration-[1.1s] ease-[cubic-bezier(0.2,0.8,0.3,1)] group-hover:grayscale-0 group-hover:contrast-100 group-hover:scale-105 mobile-color"
-                style={{
-                  opacity: 'calc(0.3 + (var(--p,1) * 0.7))',
-                  transform: 'translateY(calc((1 - var(--p,1)) * 40px)) scale(calc(1 + (1 - var(--p,1)) * 0.05))'
-                }}
-              />
-            </div>
-            <figcaption className="mt-[12px] font-medium text-[10.5px] leading-none tracking-[0.18em] uppercase text-[#8A8781] flex gap-[10px]">
-              <span className="text-[#101010]">01</span> Diamond Necklace, Gold Ring
-            </figcaption>
-          </figure>
-          
-          <figure className="md:col-start-6 md:col-span-7 md:mt-[clamp(28px,7vw,96px)] group" data-scrub>
-            <div className="overflow-hidden bg-[#E4E1DC] aspect-[4/3]">
-              <img 
-                src="/bracelet.png" 
-                alt="Jewelry Look 02" 
-                loading="lazy"
-                className="w-full h-full object-cover grayscale contrast-[1.04] transition-all duration-[1.1s] ease-[cubic-bezier(0.2,0.8,0.3,1)] group-hover:grayscale-0 group-hover:contrast-100 group-hover:scale-105 mobile-color"
-                style={{
-                  opacity: 'calc(0.3 + (var(--p,1) * 0.7))',
-                  transform: 'translateY(calc((1 - var(--p,1)) * 40px)) scale(calc(1 + (1 - var(--p,1)) * 0.05))'
-                }}
-              />
-            </div>
-            <figcaption className="mt-[12px] font-medium text-[10.5px] leading-none tracking-[0.18em] uppercase text-[#8A8781] flex gap-[10px]">
-              <span className="text-[#101010]">02</span> Pearl Bracelet, Silver Chain
-            </figcaption>
-          </figure>
-          
-          <figure className="md:col-start-3 md:col-span-5 md:mt-[clamp(16px,3vw,44px)] group" data-scrub>
-            <div className="overflow-hidden bg-[#E4E1DC] aspect-square">
-              <img 
-                src="/necklace.png" 
-                alt="Jewelry Look 03" 
-                loading="lazy"
-                className="w-full h-full object-cover grayscale contrast-[1.04] transition-all duration-[1.1s] ease-[cubic-bezier(0.2,0.8,0.3,1)] group-hover:grayscale-0 group-hover:contrast-100 group-hover:scale-105 mobile-color"
-                style={{
-                  opacity: 'calc(0.3 + (var(--p,1) * 0.7))',
-                  transform: 'translateY(calc((1 - var(--p,1)) * 40px)) scale(calc(1 + (1 - var(--p,1)) * 0.05))'
-                }}
-              />
-            </div>
-            <figcaption className="mt-[12px] font-medium text-[10.5px] leading-none tracking-[0.18em] uppercase text-[#8A8781] flex gap-[10px]">
-              <span className="text-[#101010]">03</span> Stacked Rings, Elegant Watch
-            </figcaption>
-          </figure>
+        <div className="mt-8 relative h-[500px] md:h-[600px] w-full max-w-[1000px] mx-auto">
+          <DepthCarousel
+            items={[
+              { image: '/hero.png', alt: 'Diamond Jewelry' },
+              { image: '/ring.png', alt: 'Gold Ring' },
+              { image: '/necklace.png', alt: 'Diamond Necklace' },
+              { image: '/bracelet.png', alt: 'Pearl Bracelet' },
+              { image: '/model.png', alt: 'Jewelry Model' }
+            ]}
+            autoplay={true}
+            autoplayDelay={700}
+            duration={700}
+            depth={150}
+            spread={70}
+            tilt={15}
+            visibleCards={3}
+          />
         </div>
       </div>
     </section>
