@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useRef } from 'react';
 import DepthCarousel from './DepthCarousel';
 import CurvedLoop from './CurvedLoop';
