@@ -35,7 +35,7 @@ export default function Navbar() {
             FULLY ICED
           </div>
           <div className="md:hidden flex items-center gap-2">
-            <button onClick={() => setMenuOpen(true)} aria-label="Open Menu" className="w-[32px] h-[32px] flex items-center justify-center -ml-2 text-[#101010]">
+            <button onClick={() => setMenuOpen(true)} aria-label="Open Menu" className="relative z-50 w-[32px] h-[32px] flex items-center justify-center -ml-2 text-[#101010] cursor-pointer">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
             </button>
             <div className="font-extrabold text-[22px] tracking-[0.26em]">FULLY ICED</div>
