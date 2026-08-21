@@ -43,7 +43,7 @@ export default function Lookbook() {
                 nothing was retouched, which is why the jewels shine authentically.
               </p>
               
-              <figure className="group max-w-[400px]" data-scrub>
+              <figure className="group w-full max-w-[550px]" data-scrub>
                 <div className="overflow-hidden bg-[#E4E1DC] aspect-[4/3]">
                   <img 
                     src="/bracelet.png" 
@@ -63,7 +63,7 @@ export default function Lookbook() {
             </div>
             
             {/* Right side: Carousel */}
-            <div className="relative h-[400px] md:h-[600px] w-full mt-8 md:mt-0">
+            <div className="relative h-[500px] md:h-[700px] w-full mt-12 md:mt-0 ml-0 md:ml-8">
               <DepthCarousel
                 items={[
                   { image: '/hero.png', alt: 'Diamond Jewelry' },
@@ -75,10 +75,12 @@ export default function Lookbook() {
                 autoplayDelay={700}
                 duration={700}
                 depth={150}
-                spread={70}
+                spread={80}
                 tilt={15}
                 visibleCards={3}
                 showControls={false}
+                cardWidth={380}
+                cardHeight={480}
               />
             </div>
 
