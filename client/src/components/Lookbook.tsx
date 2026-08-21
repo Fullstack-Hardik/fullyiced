@@ -33,8 +33,8 @@ export default function Lookbook() {
             <h2 className="font-extrabold text-[clamp(34px,5.4vw,76px)] leading-[0.9] tracking-[-0.03em] uppercase">Autumn<br />2026</h2>
           </div>
           <p className="text-[#8A8781] max-w-[36ch] text-[14px]">
-            Photographed over two mornings on the Isle of Grain. Nothing was steamed and
-            nothing was retouched, which is why the coats look like coats.
+            Photographed over two mornings. Nothing was heavily edited and
+            nothing was retouched, which is why the jewels shine authentically.
           </p>
         </div>
         
@@ -47,13 +47,13 @@ export default function Lookbook() {
                 loading="lazy"
                 className="w-full h-full object-cover grayscale contrast-[1.04] transition-all duration-[1.1s] ease-[cubic-bezier(0.2,0.8,0.3,1)] group-hover:grayscale-0 group-hover:contrast-100 group-hover:scale-105 mobile-color"
                 style={{
-                  clipPath: 'inset(calc((1 - var(--p,1)) * 42%) 0 0 0)',
-                  transform: 'scale(calc(1 + (1 - var(--p,1)) * 0.06))'
+                  opacity: 'calc(0.3 + (var(--p,1) * 0.7))',
+                  transform: 'translateY(calc((1 - var(--p,1)) * 40px)) scale(calc(1 + (1 - var(--p,1)) * 0.05))'
                 }}
               />
             </div>
             <figcaption className="mt-[12px] font-medium text-[10.5px] leading-none tracking-[0.18em] uppercase text-[#8A8781] flex gap-[10px]">
-              <span className="text-[#101010]">01</span> Overcoat, wide trouser
+              <span className="text-[#101010]">01</span> Diamond Necklace, Gold Ring
             </figcaption>
           </figure>
           
@@ -65,13 +65,13 @@ export default function Lookbook() {
                 loading="lazy"
                 className="w-full h-full object-cover grayscale contrast-[1.04] transition-all duration-[1.1s] ease-[cubic-bezier(0.2,0.8,0.3,1)] group-hover:grayscale-0 group-hover:contrast-100 group-hover:scale-105 mobile-color"
                 style={{
-                  clipPath: 'inset(calc((1 - var(--p,1)) * 42%) 0 0 0)',
-                  transform: 'scale(calc(1 + (1 - var(--p,1)) * 0.06))'
+                  opacity: 'calc(0.3 + (var(--p,1) * 0.7))',
+                  transform: 'translateY(calc((1 - var(--p,1)) * 40px)) scale(calc(1 + (1 - var(--p,1)) * 0.05))'
                 }}
               />
             </div>
             <figcaption className="mt-[12px] font-medium text-[10.5px] leading-none tracking-[0.18em] uppercase text-[#8A8781] flex gap-[10px]">
-              <span className="text-[#101010]">02</span> Cable crew, overshirt
+              <span className="text-[#101010]">02</span> Pearl Bracelet, Silver Chain
             </figcaption>
           </figure>
           
@@ -83,13 +83,13 @@ export default function Lookbook() {
                 loading="lazy"
                 className="w-full h-full object-cover grayscale contrast-[1.04] transition-all duration-[1.1s] ease-[cubic-bezier(0.2,0.8,0.3,1)] group-hover:grayscale-0 group-hover:contrast-100 group-hover:scale-105 mobile-color"
                 style={{
-                  clipPath: 'inset(calc((1 - var(--p,1)) * 42%) 0 0 0)',
-                  transform: 'scale(calc(1 + (1 - var(--p,1)) * 0.06))'
+                  opacity: 'calc(0.3 + (var(--p,1) * 0.7))',
+                  transform: 'translateY(calc((1 - var(--p,1)) * 40px)) scale(calc(1 + (1 - var(--p,1)) * 0.05))'
                 }}
               />
             </div>
             <figcaption className="mt-[12px] font-medium text-[10.5px] leading-none tracking-[0.18em] uppercase text-[#8A8781] flex gap-[10px]">
-              <span className="text-[#101010]">03</span> Open collar, worn open
+              <span className="text-[#101010]">03</span> Stacked Rings, Elegant Watch
             </figcaption>
           </figure>
         </div>
