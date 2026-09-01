@@ -29,51 +29,54 @@ export default function Shop() {
     }, 1300);
   };
 
-  const heart = (
-    <svg viewBox="0 0 24 24" className="w-[14px] h-[14px] fill-transparent stroke-[#101010] stroke-[1.6]">
-      <path d="M12 20.5 3.8 12.6a5 5 0 0 1 7.1-7l1.1 1.1 1.1-1.1a5 5 0 0 1 7.1 7Z"/>
-    </svg>
-  );
-
   return (
-    <section id="shop" className="py-[clamp(40px,7vh,86px)] pb-[clamp(48px,8vh,96px)]">
-      <div className="wrap">
+    <section id="shop" className="py-stack-lg bg-matte-black">
+      <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
         <div className="flex justify-between items-end gap-[20px] mb-[clamp(20px,3.4vh,34px)] flex-wrap">
-          <h2 className="font-extrabold text-[clamp(26px,3.4vw,44px)] tracking-[-0.015em] uppercase">Best of Fully ICED</h2>
-          <a href="#" className="btn-line">View all 42</a>
+          <h2 className="font-headline-xl text-headline-xl text-pure-white uppercase tracking-tighter">Best of Fully ICED</h2>
+          <a href="#" className="border-b border-pure-white text-pure-white font-label-caps uppercase pb-1 hover:text-electric-gold hover:border-electric-gold transition-colors">
+            View all 42
+          </a>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-[clamp(12px,1.8vw,26px)]">
+        
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-gutter">
           {PRODUCTS.map((p, i) => (
-            <article key={i} className="relative group">
-              <div className="relative aspect-[3/4] overflow-hidden bg-[#E4E1DC]">
+            <article key={i} className="relative group border border-dark-grey bg-surface-container hover:border-electric-gold transition-colors duration-300">
+              <div className="relative aspect-[3/4] overflow-hidden bg-surface-container-low">
                 <img 
                   src={i % 2 === 0 ? '/ring.png' : '/bracelet.png'} 
                   alt={p.nm} 
                   loading="lazy"
-                  className="w-full h-full object-cover transition-all duration-[1s,0.6s] ease-[cubic-bezier(0.2,0.8,0.3,1)] grayscale contrast-[1.05] group-hover:grayscale-0 group-hover:contrast-100 group-hover:scale-105 mobile-color"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out grayscale group-hover:grayscale-0 group-hover:scale-105 opacity-80 group-hover:opacity-100"
                 />
+                
                 <button 
-                  className={`absolute top-[10px] right-[10px] w-[30px] h-[30px] rounded-full flex items-center justify-center border-0 cursor-pointer z-10 transition-transform duration-250 hover:scale-110 ${favorites[i] ? '[&>svg]:fill-[#101010]' : ''}`}
+                  className={`absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center bg-pure-white/90 text-matte-black hover:bg-electric-gold transition-colors z-10`}
                   onClick={() => toggleFav(i)}
                   aria-pressed={favorites[i]}
                   aria-label={`Save ${p.nm}`}
-                  style={{ background: 'rgba(239,237,232,0.9)' }}
                 >
-                  {heart}
+                  <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: favorites[i] ? "'FILL' 1" : "'FILL' 0" }}>
+                    favorite
+                  </span>
                 </button>
-                <button 
-                  className="absolute left-[10px] right-[10px] bottom-[10px] z-10 bg-[#101010] text-[#EFEDE8] border-0 cursor-pointer p-[12px] font-medium text-[10px] leading-none tracking-[0.2em] uppercase opacity-0 translate-y-[12px] transition-all duration-450 ease-[cubic-bezier(0.2,0.8,0.3,1)] group-hover:opacity-100 group-hover:translate-y-0 focus-within:opacity-100 focus-within:translate-y-0"
-                  onClick={() => addToBag(i)}
-                >
-                  {added[i] ? 'Added' : 'Add to bag'}
-                </button>
-              </div>
-              <div className="pt-[12px] flex justify-between gap-[12px] items-baseline">
-                <div>
-                  <div className="font-semibold text-[13.5px]">{p.nm}</div>
-                  <div className="text-[11px] text-[#8A8781] tracking-[0.08em] uppercase mt-[3px]">{p.ct}</div>
+
+                <div className="absolute inset-0 bg-gradient-to-t from-matte-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <button 
+                    className="w-full bg-electric-gold text-matte-black font-label-caps py-3 uppercase tracking-wider hover:bg-pure-white transition-colors"
+                    onClick={() => addToBag(i)}
+                  >
+                    {added[i] ? 'ADDED' : 'ADD TO BAG'}
+                  </button>
                 </div>
-                <div className="font-semibold text-[13.5px] tabular-nums">${p.pr}</div>
+              </div>
+
+              <div className="p-4 flex justify-between gap-2 items-start bg-surface-container border-t border-dark-grey">
+                <div>
+                  <div className="font-headline-sm text-pure-white leading-tight">{p.nm}</div>
+                  <div className="text-sm font-label-caps text-on-surface-variant tracking-wider mt-1">{p.ct}</div>
+                </div>
+                <div className="font-price-tag text-pure-white tabular-nums">${p.pr}</div>
               </div>
             </article>
           ))}

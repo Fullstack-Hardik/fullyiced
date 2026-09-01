@@ -1,63 +1,67 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
+import MorphSlider from './MorphSlider';
+import WarpText from './WarpText';
 
 export default function Hero() {
-  const textRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    let rafId: number;
-    const handleScroll = () => {
-      rafId = requestAnimationFrame(() => {
-        if (textRef.current) {
-          textRef.current.style.transform = `translateY(${window.scrollY * 0.14}px)`;
-        }
-      });
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      cancelAnimationFrame(rafId);
-    };
-  }, []);
+  const items = [
+    { image: '/hero.png' },
+    { image: '/necklace.png' },
+    { image: '/ring.png' },
+    { image: '/bracelet.png' }
+  ];
 
   return (
-    <header id="hero" className="relative min-h-[calc(100svh-72px)] flex flex-col justify-center pt-[clamp(20px,4vh,48px)] z-[50]">
-      <div className="wrap relative w-full h-full flex flex-col justify-center">
-        <div className="hidden md:block absolute left-[clamp(18px,3.4vw,44px)] top-[clamp(6px,2vh,22px)] z-10 md:static md:mb-[14px]">
-          <p className="font-medium text-[12px] leading-[1.9] tracking-[0.24em] uppercase">
-            Fashion<br />that moves<br />with you.
-          </p>
-          <div className="w-[52px] h-[1px] bg-[#101010] mt-[12px]"></div>
-        </div>
-
+    <header id="hero" className="relative min-h-[calc(100svh-72px)] flex flex-col justify-center bg-matte-black overflow-hidden z-[40]">
+      {/* Morph Slider Background */}
+      <div className="absolute inset-0 z-0">
+        <MorphSlider
+          items={items}
+          transition="melt"
+          intensity={0.55}
+          aberration={0.35}
+          drift={0.4}
+          autoplay={true}
+          autoplayDelay={1}
+          duration={1.2}
+          showCaptions={false}
+          showControls={false}
+          showIndicators={false}
+          radius={0}
+        />
+        {/* Gradient Overlay for Text Readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-surface-variant/30 to-matte-black/90 pointer-events-none"></div>
+      </div>
+      
+      <div className="wrap relative w-full h-full flex flex-col justify-center z-10 pointer-events-none">
         <div className="relative w-full flex-grow grid place-items-center min-h-[min(58vh,560px)]">
-          <div 
-            ref={textRef}
-            className="absolute inset-0 grid place-items-center pointer-events-none z-[1]"
-            aria-hidden="true"
-          >
-            <b className="font-extrabold text-[clamp(40px,12vw,220px)] tracking-[-0.02em] leading-[0.8] whitespace-nowrap block text-[#101010]">
-              FULLY ICED
-            </b>
+          <div className="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none mt-20">
+            <WarpText
+              text="FULLY ICED"
+              color="#ffffff"
+              warpStrength={0}
+              warpScale={1.7}
+              speed={0.55}
+              pointerInfluence={0.6}
+              pointerStrength={0.6}
+              refraction={0.03}
+              ripple={true}
+              fontSize="clamp(6rem, 16vw, 15rem)"
+              fontWeight={900}
+              fontFamily="'Barlow Condensed', sans-serif"
+              letterSpacing="0.05em"
+              style={{ width: '100%', height: '350px', pointerEvents: 'auto', textShadow: '0 0 30px rgba(255,255,255,0.3)' }}
+              className="flex justify-center items-center"
+            />
+            
+            {/* New Subtext with Effect */}
+            <div className="mt-4 md:mt-2 text-center relative z-20 overflow-hidden">
+              <span className="inline-block font-headline-sm text-sm md:text-base text-electric-gold border border-electric-gold/30 px-6 py-3 uppercase tracking-[0.3em] bg-matte-black/40 backdrop-blur-sm shadow-[0_0_15px_rgba(220,185,94,0.15)] hover:bg-electric-gold hover:text-matte-black transition-colors duration-300 cursor-pointer pointer-events-auto">
+                Discover The Premium Collection
+              </span>
+            </div>
           </div>
-          
-          {/* Hero image exactly touching the next section */}
-          <div
-            className="absolute bottom-[-50px] z-[5] w-full max-w-[850px] flex justify-center pointer-events-none"
-          >
-             <img 
-               src="/hero.png" 
-               alt="Hero Diamond Jewelry"
-               className="w-full h-auto object-contain object-bottom max-h-[90vh] drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
-             />
-          </div>
-        </div>
-        <div className="md:hidden flex flex-col items-center justify-center mt-12 pb-[40px] z-10 relative">
-          <p className="font-medium text-[12px] leading-[1.9] tracking-[0.24em] uppercase text-center">
-            Fashion<br />that moves<br />with you.
-          </p>
-          <div className="w-[52px] h-[1px] bg-[#101010] mt-[12px]"></div>
         </div>
       </div>
     </header>

@@ -35,37 +35,37 @@ export default function Atelier() {
   }, []);
 
   return (
-    <section id="atelier" className="bg-[#101010] text-[#EFEDE8]">
+    <section id="atelier" className="bg-matte-black text-on-surface border-t border-dark-grey">
       <div className="grid grid-cols-1 md:grid-cols-[1.05fr_0.95fr] items-stretch">
         <figure className="overflow-hidden">
           <img 
             src="/ring.png" 
             alt="Jewelry Crafting Atelier" 
             loading="lazy" 
-            className="w-full h-full object-cover min-h-[min(66vh,540px)] grayscale contrast-[1.08] transition-all duration-[1s] hover:grayscale-0 hover:contrast-100 mobile-color"
+            className="w-full h-full object-cover min-h-[min(66vh,540px)] grayscale transition-all duration-700 hover:grayscale-0 hover:scale-105"
           />
         </figure>
         <div className="p-[clamp(34px,6vh,80px)_clamp(20px,4vw,64px)] self-center">
-          <div className="lbl mb-[16px] text-[#EFEDE8]/50">The studio</div>
-          <h2 className="font-extrabold text-[clamp(30px,4.4vw,60px)] leading-[0.94] tracking-[-0.03em] uppercase mb-[16px]">
+          <div className="font-label-caps text-label-caps text-electric-gold uppercase mb-4 tracking-wider">The studio</div>
+          <h2 className="font-display-lg-mobile md:font-display-lg text-pure-white uppercase leading-[0.94] tracking-tighter mb-6">
             Eleven people,<br />one floor.
           </h2>
-          <p className="text-[#EFEDE8]/60 max-w-[34ch] text-[14px]">
+          <p className="text-on-surface-variant max-w-[34ch] font-body-lg text-body-lg">
             Everything is cut and made in the same building on Redchurch Street. Small runs,
             so if something does not sell we simply do not make it again.
           </p>
-          <div ref={numsRef} className="mt-[32px] flex gap-[clamp(20px,4vw,52px)] flex-wrap border-t border-[#EFEDE8]/15 pt-[22px]">
+          <div ref={numsRef} className="mt-10 flex gap-8 flex-wrap border-t border-dark-grey pt-6">
             <div>
-              <b data-to="11" className="block font-extrabold text-[clamp(28px,3.4vw,44px)] tabular-nums leading-none mb-[6px]">0</b>
-              <span className="text-[9.5px] tracking-[0.18em] uppercase text-[#EFEDE8]/50">People</span>
+              <b data-to="11" className="block font-headline-xl text-pure-white tabular-nums leading-none mb-2">0</b>
+              <span className="font-label-caps text-xs tracking-wider uppercase text-on-surface-variant">People</span>
             </div>
             <div>
-              <b data-to="42" className="block font-extrabold text-[clamp(28px,3.4vw,44px)] tabular-nums leading-none mb-[6px]">0</b>
-              <span className="text-[9.5px] tracking-[0.18em] uppercase text-[#EFEDE8]/50">Styles a year</span>
+              <b data-to="42" className="block font-headline-xl text-pure-white tabular-nums leading-none mb-2">0</b>
+              <span className="font-label-caps text-xs tracking-wider uppercase text-on-surface-variant">Styles a year</span>
             </div>
             <div>
-              <b data-to="120" className="block font-extrabold text-[clamp(28px,3.4vw,44px)] tabular-nums leading-none mb-[6px]">0</b>
-              <span className="text-[9.5px] tracking-[0.18em] uppercase text-[#EFEDE8]/50">Units per run</span>
+              <b data-to="120" className="block font-headline-xl text-pure-white tabular-nums leading-none mb-2">0</b>
+              <span className="font-label-caps text-xs tracking-wider uppercase text-on-surface-variant">Units per run</span>
             </div>
           </div>
         </div>
