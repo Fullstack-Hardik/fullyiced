@@ -12,20 +12,21 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-matte-black border-t border-dark-grey font-body-md text-body-md w-full bottom-0 z-10 relative pb-8 overflow-hidden">
-      {/* Flowing Menu Section - Added margin-bottom to prevent overlap */}
-      <div className="mb-stack-lg border-b border-dark-grey w-full relative">
+    <>
+      {/* Flowing Menu Section - Moved completely outside of footer to prevent overlap */}
+      <div className="w-full relative z-20 border-t border-dark-grey">
         <FlowingMenu items={demoItems} bgColor="#0c0c0e" marqueeBgColor="#dcb95e" marqueeTextColor="#0c0c0e" textColor="#fff" borderColor="rgba(255,255,255,0.1)" />
       </div>
 
-      {/* Huge background text */}
-      <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none overflow-hidden mix-blend-overlay">
-        <div className="font-display-lg text-[clamp(100px,20vw,400px)] text-pure-white whitespace-nowrap uppercase tracking-tighter font-black">
-          FULLY ICED
+      <footer className="bg-matte-black border-t border-dark-grey font-body-md text-body-md w-full bottom-0 z-10 relative pb-8 overflow-hidden">
+        {/* Huge background text */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none overflow-hidden mix-blend-overlay">
+          <div className="font-display-lg text-[clamp(100px,20vw,400px)] text-pure-white whitespace-nowrap uppercase tracking-tighter font-black">
+            FULLY ICED
+          </div>
         </div>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-gutter px-margin-mobile md:px-margin-desktop py-stack-lg max-w-[1440px] mx-auto relative z-10">
+        
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-gutter px-margin-mobile md:px-margin-desktop py-stack-lg max-w-[1440px] mx-auto relative z-10">
         
         {/* ModelViewer 3D object */}
         <div className="hidden md:flex justify-center items-center pointer-events-auto w-full h-[300px] border border-dark-grey relative bg-surface-variant/20">
